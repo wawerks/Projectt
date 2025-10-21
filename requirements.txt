@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pillow
+requests
+tensorflow
+numpy
+transformers
+torch
+safetensors
+fastapi

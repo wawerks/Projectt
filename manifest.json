@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "AI Image Deepfake Detector",
+  "version": "1.0",
+  "description": "Detect deepfake or AI-generated faces directly from right-click context menu.",
+  "permissions": ["contextMenus", "activeTab", "scripting", "notifications"],
+  "host_permissions": ["http://127.0.0.1:8000/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "AI Image Detector"
+  },
+  "icons": {
+    "16": "icon1.jpg",
+    "48": "icon2.jpg",
+    "128": "icon3.jpg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["cropper.min.js", "content.js"],
+      "css": ["cropper.min.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["cropper.min.js", "cropper.min.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

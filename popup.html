@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Image Detector</title>
+  <style>
+    body { width: 260px; padding: 10px; font-family: Arial, sans-serif; }
+    label { display: block; margin-top: 8px; font-size: 12px; color: #333; }
+    input[type="text"], input[type="password"] { width: 100%; box-sizing: border-box; padding: 6px; margin-top: 4px; }
+    .row { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
+    button { flex: 1; padding: 8px; cursor: pointer; }
+    .small { font-size: 11px; color: #666; }
+  </style>
+</head>
+<body>
+  <label for="hfToken">Hugging Face API Token</label>
+  <input id="hfToken" type="password" placeholder="hf_..." />
+  <div class="row">
+    <button id="saveToken">Save Token</button>
+  </div>
+  <label for="inferenceMode">Inference Mode</label>
+  <select id="inferenceMode" style="width:100%; padding:6px;">
+    <option value="hf">Hugging Face API</option>
+    <option value="backend">Custom Backend</option>
+  </select>
+  <label for="backendUrl">Backend URL</label>
+  <input id="backendUrl" type="text" placeholder="http://localhost:8000" />
+  <div class="row">
+    <button id="saveSettings">Save Settings</button>
+  </div>
+  <button id="openReview">View Flagged Images</button>
+  <script src="popup.js"></script>
+</body>
+</html>
