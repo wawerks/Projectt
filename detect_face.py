@@ -8,5 +8,5 @@ def is_human_face(image_path):
     return len(faces) > 0
 
 # Example
-img = r"C:\Users\rjhon\OneDrive\Desktop\AI-Image-Detector\412.jpg"
+img = r"C:\Users\rjhon\Desktop\Projectt\412.jpg"
 print("✅ Human face detected!" if is_human_face(img) else "❌ No face found.")

@@ -8,3 +8,5 @@ transformers
 torch
 safetensors
 fastapi
+opencv-python
+python-multipart
